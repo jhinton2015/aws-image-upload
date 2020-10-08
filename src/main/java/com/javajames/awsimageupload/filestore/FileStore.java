@@ -47,7 +47,7 @@ public class FileStore {
             S3Object object = s3.getObject(path, key);
             return IOUtils.toByteArray(object.getObjectContent());
         } catch (AmazonServiceException | IOException e) {
-            throw new IllegalStateException("Failed to download file to s3", e);
+            throw new IllegalStateException("Failed to download file from s3", e);
         }
     }
 }
