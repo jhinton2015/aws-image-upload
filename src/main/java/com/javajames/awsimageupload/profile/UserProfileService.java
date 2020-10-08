@@ -85,7 +85,7 @@ public class UserProfileService {
                 IMAGE_JPEG.getMimeType(),
                 IMAGE_PNG.getMimeType(),
                 IMAGE_GIF.getMimeType()).contains(file.getContentType())){
-            throw new IllegalStateException("File must be an image [" + file.getContentType() + "]");
+            throw new IllegalStateException("Selected file must be an image [" + file.getContentType() + "]");
         }
     }
 
