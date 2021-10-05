@@ -36,7 +36,7 @@ public class UserProfileService {
         isImage(file);
         // 3. the user exists in our database
         UserProfile user = getUserProfileOrThrow(userProfileId);
-        // 4. grab some metadata from file if any
+        // 4. grab some metadata from file if there is any
 
         Map<String, String> metadata = extractMetadata(file);
         // 5. store the image in s3 and update database (userProfileImageLink) with s3 image link
